@@ -10,23 +10,23 @@ const TripsManagement: React.FC = () => {
   return (
     <div className="max-w-7xl mx-auto p-4 md:p-8 space-y-6">
       {/* Header */}
-      <header className="flex items-center justify-between">
+      <header className="flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div className="flex items-center gap-2">
           <span className="text-slate-400 text-sm">Logistics</span>
           <span className="material-symbols-outlined text-slate-600 text-sm">chevron_right</span>
           <span className="text-slate-900 dark:text-white font-medium text-sm">Trips Management</span>
         </div>
-        <div className="flex items-center gap-4">
-          <button className="flex items-center gap-2 text-slate-500 dark:text-slate-400 hover:text-primary transition-colors text-sm font-medium">
+        <div className="flex flex-wrap items-center gap-2 md:gap-4">
+          <button className="flex-1 md:flex-none flex items-center justify-center gap-2 px-3 py-2 rounded-lg border border-slate-200 dark:border-slate-800 text-slate-500 dark:text-slate-400 hover:text-primary transition-colors text-sm font-medium">
             <span className="material-symbols-outlined text-[20px]">file_download</span>
-            Export Report
+            <span className="whitespace-nowrap">Export</span>
           </button>
           <button
             onClick={() => setIsModalOpen(true)}
-            className="bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-lg text-sm font-bold shadow-lg shadow-primary/25 flex items-center gap-2 transition-all"
+            className="flex-1 md:flex-none bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-lg text-sm font-bold shadow-lg shadow-primary/25 flex items-center justify-center gap-2 transition-all"
           >
             <span className="material-symbols-outlined text-[20px]">add</span>
-            Add New Trip
+            <span className="whitespace-nowrap">Add Trip</span>
           </button>
         </div>
       </header>
@@ -45,11 +45,11 @@ const TripsManagement: React.FC = () => {
           <span className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 group-focus-within:text-primary transition-colors">search</span>
           <input className="w-full bg-slate-50 dark:bg-background-dark border-none rounded-lg py-2.5 pl-10 pr-4 text-sm text-slate-900 dark:text-white placeholder:text-slate-500 focus:ring-2 focus:ring-primary/50 transition-all outline-none" placeholder="Search by driver name or trip ID..." type="text"/>
         </div>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 overflow-x-auto no-scrollbar">
           <div className="flex items-center bg-slate-50 dark:bg-background-dark rounded-lg p-1 border border-slate-200 dark:border-border-dark">
-            <button className="px-3 py-1.5 text-xs font-medium text-white bg-primary rounded shadow-sm">All</button>
-            <button className="px-3 py-1.5 text-xs font-medium text-slate-500 dark:text-slate-400 hover:text-primary transition-colors">Ongoing</button>
-            <button className="px-3 py-1.5 text-xs font-medium text-slate-500 dark:text-slate-400 hover:text-primary transition-colors">Completed</button>
+            <button className="px-3 py-1.5 text-xs font-medium text-white bg-primary rounded shadow-sm whitespace-nowrap">All</button>
+            <button className="px-3 py-1.5 text-xs font-medium text-slate-500 dark:text-slate-400 hover:text-primary transition-colors whitespace-nowrap">Ongoing</button>
+            <button className="px-3 py-1.5 text-xs font-medium text-slate-500 dark:text-slate-400 hover:text-primary transition-colors whitespace-nowrap">Completed</button>
           </div>
         </div>
       </div>

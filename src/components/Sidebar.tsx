@@ -2,6 +2,11 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { cn } from '../utils/cn';
 
+interface SidebarProps {
+  onClose?: () => void;
+  className?: string;
+}
+
 const navItems = [
   { icon: 'dashboard', label: 'Dashboard', path: '/' },
   { icon: 'map', label: 'Mileage', path: '/mileage' },
@@ -13,9 +18,9 @@ const navItems = [
   { icon: 'settings', label: 'Settings', path: '/settings' },
 ];
 
-export const Sidebar: React.FC = () => {
+export const Sidebar: React.FC<SidebarProps> = ({ onClose, className }) => {
   return (
-    <aside className="hidden md:flex flex-col w-64 bg-[#111318] border-r border-border-dark flex-shrink-0 h-screen sticky top-0">
+    <aside className={cn("flex flex-col w-64 bg-[#111318] border-r border-border-dark flex-shrink-0 h-full", className)}>
       <div className="p-6">
         <div className="flex items-center gap-3">
           <div className="bg-primary/20 rounded-full size-10 flex items-center justify-center text-primary">
@@ -32,6 +37,7 @@ export const Sidebar: React.FC = () => {
           <NavLink
             key={item.path}
             to={item.path}
+            onClick={onClose}
             className={({ isActive }) =>
               cn(
                 "flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors group",

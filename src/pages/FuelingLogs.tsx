@@ -17,20 +17,20 @@ const FuelingLogs: React.FC = () => {
             <span className="material-symbols-outlined text-[12px]">chevron_right</span>
             <span className="text-slate-900 dark:text-white font-medium">Fueling</span>
           </div>
-          <h1 className="text-3xl font-bold text-slate-900 dark:text-white tracking-tight">Fueling Logs</h1>
-          <p className="text-slate-500 dark:text-slate-400 mt-1 max-w-2xl">Track daily fuel consumption, expenses, and manage fueling records across the fleet.</p>
+          <h1 className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white tracking-tight">Fueling Logs</h1>
+          <p className="text-sm md:text-base text-slate-500 dark:text-slate-400 mt-1 max-w-2xl">Track daily fuel consumption, expenses, and manage fueling records across the fleet.</p>
         </div>
-        <div className="flex gap-3">
-          <button className="flex items-center justify-center gap-2 rounded-lg h-10 px-4 bg-white dark:bg-surface-dark border border-slate-200 dark:border-border-dark hover:bg-slate-50 dark:hover:bg-white/5 text-slate-700 dark:text-white text-sm font-bold transition-colors">
+        <div className="flex flex-wrap gap-2 md:gap-3">
+          <button className="flex-1 md:flex-none flex items-center justify-center gap-2 rounded-lg h-10 px-4 bg-white dark:bg-surface-dark border border-slate-200 dark:border-border-dark hover:bg-slate-50 dark:hover:bg-white/5 text-slate-700 dark:text-white text-sm font-bold transition-colors">
             <span className="material-symbols-outlined text-[20px]">file_download</span>
-            <span className="hidden sm:inline">Export CSV</span>
+            <span className="whitespace-nowrap">Export CSV</span>
           </button>
           <button
             onClick={() => setIsModalOpen(true)}
-            className="flex items-center justify-center gap-2 rounded-lg h-10 px-6 bg-primary hover:bg-primary/90 text-white text-sm font-bold shadow-lg shadow-primary/20 transition-all"
+            className="flex-1 md:flex-none flex items-center justify-center gap-2 rounded-lg h-10 px-6 bg-primary hover:bg-primary/90 text-white text-sm font-bold shadow-lg shadow-primary/20 transition-all"
           >
             <span className="material-symbols-outlined text-[20px]">add_circle</span>
-            <span>Log Fueling</span>
+            <span className="whitespace-nowrap">Log Fueling</span>
           </button>
         </div>
       </div>

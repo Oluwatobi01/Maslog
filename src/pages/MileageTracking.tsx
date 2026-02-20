@@ -12,20 +12,20 @@ const MileageTracking: React.FC = () => {
       {/* Header Area */}
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
         <div>
-          <h2 className="text-3xl font-bold text-slate-900 dark:text-white tracking-tight">Mileage Tracking</h2>
-          <p className="text-slate-500 dark:text-slate-400 mt-1">Monitor daily vehicle operations, distance metrics, and efficiency scores.</p>
+          <h2 className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white tracking-tight">Mileage Tracking</h2>
+          <p className="text-sm md:text-base text-slate-500 dark:text-slate-400 mt-1">Monitor daily vehicle operations, distance metrics, and efficiency scores.</p>
         </div>
-        <div className="flex gap-3">
-          <button className="flex items-center justify-center gap-2 px-4 py-2 bg-surface-dark border border-border-dark rounded-lg text-slate-200 hover:bg-border-dark transition-colors text-sm font-medium">
+        <div className="flex flex-wrap gap-2 md:gap-3">
+          <button className="flex-1 md:flex-none flex items-center justify-center gap-2 px-4 py-2 bg-surface-dark border border-border-dark rounded-lg text-slate-200 hover:bg-border-dark transition-colors text-sm font-medium">
             <span className="material-symbols-outlined text-[18px]">download</span>
-            Export Report
+            <span className="whitespace-nowrap">Export Report</span>
           </button>
           <button
             onClick={() => setIsModalOpen(true)}
-            className="flex items-center justify-center gap-2 px-4 py-2 bg-primary rounded-lg text-white hover:bg-blue-600 transition-colors shadow-lg shadow-primary/25 text-sm font-bold"
+            className="flex-1 md:flex-none flex items-center justify-center gap-2 px-4 py-2 bg-primary rounded-lg text-white hover:bg-blue-600 transition-colors shadow-lg shadow-primary/25 text-sm font-bold"
           >
             <span className="material-symbols-outlined text-[18px]">add</span>
-            Add Log
+            <span className="whitespace-nowrap">Add Log</span>
           </button>
         </div>
       </div>

@@ -18,7 +18,41 @@ interface TableProps<T> {
 export function Table<T>({ columns, data, onRowClick, className }: TableProps<T>) {
   return (
     <div className={cn("bg-white dark:bg-surface-dark border border-slate-200 dark:border-border-dark rounded-xl overflow-hidden shadow-sm", className)}>
-      <div className="overflow-x-auto">
+      {/* Mobile Card View */}
+      <div className="md:hidden divide-y divide-slate-200 dark:divide-border-dark">
+        {data.length === 0 ? (
+          <div className="px-6 py-8 text-center text-slate-500 dark:text-slate-400">
+            No data available
+          </div>
+        ) : (
+          data.map((item, rowIdx) => (
+            <div
+              key={rowIdx}
+              onClick={() => onRowClick?.(item)}
+              className={cn(
+                "p-4 space-y-3",
+                onRowClick && "cursor-pointer active:bg-slate-50 dark:active:bg-[#1e2634]"
+              )}
+            >
+              {columns.map((column, colIdx) => (
+                <div key={colIdx} className="flex justify-between items-start gap-4">
+                  <span className="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider shrink-0">
+                    {column.header}
+                  </span>
+                  <div className={cn("text-sm text-right overflow-hidden break-words", column.className)}>
+                    {typeof column.accessor === 'function'
+                      ? column.accessor(item)
+                      : (item[column.accessor] as React.ReactNode)}
+                  </div>
+                </div>
+              ))}
+            </div>
+          ))
+        )}
+      </div>
+
+      {/* Desktop Table View */}
+      <div className="hidden md:block overflow-x-auto">
         <table className="w-full text-left border-collapse">
           <thead>
             <tr className="bg-slate-50 dark:bg-[#151b26] border-b border-slate-200 dark:border-border-dark">

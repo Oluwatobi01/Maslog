@@ -5,19 +5,19 @@ import { Table } from '../components/Table';
 const FinancialSummary: React.FC = () => {
   return (
     <div className="max-w-7xl mx-auto p-4 md:p-8 space-y-8">
-      <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+      <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
         <div className="flex flex-col gap-1">
-          <h1 className="text-3xl font-bold text-slate-900 dark:text-white tracking-tight">Performance Report</h1>
-          <p className="text-slate-500 dark:text-slate-400">Track monthly earnings, expenses, and net profit per vehicle operations.</p>
+          <h1 className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white tracking-tight">Performance Report</h1>
+          <p className="text-sm md:text-base text-slate-500 dark:text-slate-400">Track monthly earnings, expenses, and net profit per vehicle operations.</p>
         </div>
-        <div className="flex items-center gap-3">
-          <button className="flex items-center gap-2 px-4 py-2 rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-surface-dark text-slate-700 dark:text-slate-200 text-sm font-medium hover:bg-slate-50 dark:hover:bg-surface-hover transition-colors shadow-sm">
+        <div className="flex flex-wrap items-center gap-2 md:gap-3">
+          <button className="flex-1 md:flex-none flex items-center justify-center gap-2 px-4 py-2 rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-surface-dark text-slate-700 dark:text-slate-200 text-sm font-medium hover:bg-slate-50 dark:hover:bg-surface-hover transition-colors shadow-sm">
             <span className="material-symbols-outlined text-lg">picture_as_pdf</span>
-            Export PDF
+            <span className="whitespace-nowrap">PDF</span>
           </button>
-          <button className="flex items-center gap-2 px-4 py-2 rounded-lg bg-primary text-white text-sm font-medium hover:bg-blue-600 transition-colors shadow-lg shadow-primary/25">
+          <button className="flex-1 md:flex-none flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-primary text-white text-sm font-medium hover:bg-blue-600 transition-colors shadow-lg shadow-primary/25">
             <span className="material-symbols-outlined text-lg">table_view</span>
-            Export Excel
+            <span className="whitespace-nowrap">Excel</span>
           </button>
         </div>
       </div>

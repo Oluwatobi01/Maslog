@@ -14,7 +14,7 @@ const Dashboard: React.FC = () => {
         ></div>
         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent z-10"></div>
         <div className="relative z-20">
-          <h2 className="text-white text-3xl font-bold mb-1">Fleet Overview</h2>
+          <h2 className="text-white text-2xl md:text-3xl font-bold mb-1">Fleet Overview</h2>
           <p className="text-slate-300 text-sm">Welcome back. Here's what's happening with your fleet today.</p>
         </div>
       </div>
@@ -60,7 +60,7 @@ const Dashboard: React.FC = () => {
           {/* Quick Actions */}
           <div className="bg-white dark:bg-surface-dark border border-slate-200 dark:border-border-dark rounded-xl p-5">
             <h3 className="text-slate-900 dark:text-white text-lg font-bold mb-4">Quick Actions</h3>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
               {[
                 { label: 'Log Trip', icon: 'add_road', color: 'text-primary' },
                 { label: 'Add Fuel Log', icon: 'local_gas_station', color: 'text-blue-500' },

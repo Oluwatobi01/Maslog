@@ -10,23 +10,23 @@ const MaintenanceExpenses: React.FC = () => {
   return (
     <div className="max-w-7xl mx-auto p-4 md:p-8 space-y-6">
       {/* Header */}
-      <div className="flex flex-wrap items-end justify-between gap-4">
+      <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
         <div>
           <h1 className="text-2xl font-bold text-slate-900 dark:text-white tracking-tight">Maintenance Logs</h1>
           <p className="text-sm text-slate-500 dark:text-[#9da6b9] mt-1">Manage vehicle repairs, scheduled service, and miscellaneous costs.</p>
         </div>
-        <div className="flex items-center gap-3">
-          <button className="flex items-center gap-2 px-3 py-2 bg-slate-100 dark:bg-[#282e39] rounded-lg text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-[#323945] transition-colors">
+        <div className="flex flex-wrap gap-2 md:gap-3">
+          <button className="flex-1 md:flex-none flex items-center justify-center gap-2 px-3 py-2 bg-slate-100 dark:bg-[#282e39] rounded-lg text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-[#323945] transition-colors">
             <span className="material-symbols-outlined text-[18px]">calendar_today</span>
-            <span>Nov 2023</span>
+            <span className="whitespace-nowrap">Nov 2023</span>
             <span className="material-symbols-outlined text-[18px]">arrow_drop_down</span>
           </button>
           <button
             onClick={() => setIsModalOpen(true)}
-            className="flex items-center gap-2 px-4 py-2 bg-primary hover:bg-blue-700 text-white rounded-lg text-sm font-bold shadow-lg shadow-primary/20 transition-all"
+            className="flex-1 md:flex-none flex items-center justify-center gap-2 px-4 py-2 bg-primary hover:bg-blue-700 text-white rounded-lg text-sm font-bold shadow-lg shadow-primary/20 transition-all"
           >
             <span className="material-symbols-outlined text-[18px]">add</span>
-            <span>Log Expense</span>
+            <span className="whitespace-nowrap">Log Expense</span>
           </button>
         </div>
       </div>
@@ -42,7 +42,7 @@ const MaintenanceExpenses: React.FC = () => {
       {/* Tabs & Search */}
       <div className="flex flex-col gap-4">
         <div className="flex flex-wrap items-center justify-between border-b border-slate-200 dark:border-[#282e39] pb-0">
-          <div className="flex gap-6">
+          <div className="flex gap-4 md:gap-6 overflow-x-auto no-scrollbar">
             <button className="pb-3 border-b-2 border-primary text-primary font-bold text-sm px-1 flex items-center gap-2">
               <span className="material-symbols-outlined text-[18px]">build</span>
               Maintenance Logs

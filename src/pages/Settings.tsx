@@ -118,12 +118,12 @@ const Settings: React.FC = () => {
       </section>
 
       {/* Action Footer */}
-      <div className="fixed bottom-0 right-0 z-10 w-full border-t border-slate-200 bg-white/80 p-4 backdrop-blur-md dark:border-slate-800 dark:bg-[#111318]/90 lg:w-[calc(100%-16rem)]">
-        <div className="mx-auto flex max-w-5xl items-center justify-end gap-4">
-          <button className="rounded-lg px-4 py-2.5 text-sm font-semibold text-slate-600 hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-800 transition-colors">
+      <div className="fixed bottom-0 right-0 z-10 w-full border-t border-slate-200 bg-white/80 p-4 backdrop-blur-md dark:border-slate-800 dark:bg-[#111318]/90 md:w-[calc(100%-16rem)]">
+        <div className="mx-auto flex max-w-5xl items-center justify-end gap-3 md:gap-4">
+          <button className="flex-1 md:flex-none rounded-lg px-4 py-2.5 text-sm font-semibold text-slate-600 hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-800 transition-colors">
             Cancel
           </button>
-          <button className="rounded-lg bg-primary px-6 py-2.5 text-sm font-bold text-white shadow-lg shadow-primary/25 hover:bg-blue-600 transition-all">
+          <button className="flex-1 md:flex-none rounded-lg bg-primary px-6 py-2.5 text-sm font-bold text-white shadow-lg shadow-primary/25 hover:bg-blue-600 transition-all">
             Save Changes
           </button>
         </div>
