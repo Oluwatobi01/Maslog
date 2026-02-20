@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #135bec;
+  --color-background-light: #f6f6f8;
+  --color-background-dark: #101622;
+  --color-surface-dark: #1c2431;
+  --color-border-dark: #2d3646;
+
+  --color-accent-green: #0bda5e;
+  --color-accent-orange: #fa6238;
+
+  --font-display: "Manrope", sans-serif;
+
+  --radius-default: 0.25rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+}
+
+@layer base {
+  body {
+    @apply font-display antialiased;
+  }
+}
